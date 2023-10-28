@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ijb-x3-dLi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iTranslate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TranslateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngW-t9-0nj">
+                                <rect key="frame" x="0.0" y="119.00000000000003" width="393" height="340.66666666666674"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="aP2-Vj-FVb">
+                                        <rect key="frame" x="12" y="12" width="369" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uaa-E4-rBm">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="cxc-2x-FUD"/>
+                                                    <constraint firstAttribute="width" constant="30" id="mpv-UJ-FIN"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="reino-unido"/>
+                                                <connections>
+                                                    <action selector="selectCountryTranslateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgO-Md-0kd"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your passport to the world!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-Rr-Vo0">
+                                                <rect key="frame" x="51" y="0.0" width="318" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="318" id="EXn-RI-HgF"/>
+                                                    <constraint firstAttribute="height" constant="128" id="azY-Xb-48X"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7Db-i1-DNR">
+                                        <rect key="frame" x="0.0" y="164" width="393" height="24"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnY-Kw-yWO">
+                                                <rect key="frame" x="0.0" y="11.666666666666686" width="177" height="1"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="aZT-ga-15c"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-o2-o39">
+                                                <rect key="frame" x="184.66666666666666" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="LLQ-2v-Huv"/>
+                                                    <constraint firstAttribute="width" constant="24" id="afS-3O-8va"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="exchange"/>
+                                                <connections>
+                                                    <action selector="changeTranslationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oIK-vq-NUi"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHH-Xo-OIL">
+                                                <rect key="frame" x="216" y="11.666666666666686" width="177" height="1"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="a2L-hN-s7k"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="drC-2Q-5ib">
+                                        <rect key="frame" x="12" y="202" width="369" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYy-cD-kiq">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="Q7p-Ob-YvC"/>
+                                                    <constraint firstAttribute="height" constant="30" id="YUz-V1-ghv"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="mexico"/>
+                                                <connections>
+                                                    <action selector="selectCountryTranslatedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rws-Fp-Z4h"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="¡Tu pasaporte al mundo!" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr7-r4-fB8">
+                                                <rect key="frame" x="51" y="0.0" width="318" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="318" id="HjS-Vw-d3h"/>
+                                                    <constraint firstAttribute="height" constant="128" id="yOk-0s-z58"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aP2-Vj-FVb" firstAttribute="top" secondItem="ngW-t9-0nj" secondAttribute="top" constant="12" id="3PZ-xh-cAa"/>
+                                    <constraint firstAttribute="trailing" secondItem="aP2-Vj-FVb" secondAttribute="trailing" constant="12" id="4e1-2V-KVR"/>
+                                    <constraint firstItem="FHH-Xo-OIL" firstAttribute="width" secondItem="ngW-t9-0nj" secondAttribute="width" multiplier="0.45" id="Mwt-3G-3uq"/>
+                                    <constraint firstAttribute="trailing" secondItem="drC-2Q-5ib" secondAttribute="trailing" constant="12" id="Riu-cQ-MiC"/>
+                                    <constraint firstItem="drC-2Q-5ib" firstAttribute="top" secondItem="7Db-i1-DNR" secondAttribute="bottom" constant="14" id="Z9v-on-ZkD"/>
+                                    <constraint firstItem="drC-2Q-5ib" firstAttribute="leading" secondItem="ngW-t9-0nj" secondAttribute="leading" constant="12" id="hSy-21-kOM"/>
+                                    <constraint firstItem="7Db-i1-DNR" firstAttribute="top" secondItem="aP2-Vj-FVb" secondAttribute="bottom" constant="24" id="kRD-Qo-ZPw"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Db-i1-DNR" secondAttribute="trailing" id="mIn-dq-Bzp"/>
+                                    <constraint firstItem="7Db-i1-DNR" firstAttribute="leading" secondItem="ngW-t9-0nj" secondAttribute="leading" id="rUa-Co-2HZ"/>
+                                    <constraint firstItem="aP2-Vj-FVb" firstAttribute="leading" secondItem="ngW-t9-0nj" secondAttribute="leading" constant="12" id="rvD-nb-Lpl"/>
+                                    <constraint firstItem="vnY-Kw-yWO" firstAttribute="width" secondItem="ngW-t9-0nj" secondAttribute="width" multiplier="0.45" id="w1G-yb-2TL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6a9-Hz-8yh">
+                                <rect key="frame" x="0.0" y="460.66666666666669" width="393" height="35"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cel-DG-CuJ">
+                                        <rect key="frame" x="12" y="0.0" width="43" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oh-t3-Mz2">
+                                                <rect key="frame" x="0.0" y="0.0" width="43" height="35"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Clear">
+                                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7Z9-BV-D19"/>
+                                    <constraint firstItem="Cel-DG-CuJ" firstAttribute="top" secondItem="6a9-Hz-8yh" secondAttribute="top" id="L3c-uy-EgX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cel-DG-CuJ" secondAttribute="bottom" id="XMl-Gj-a0l"/>
+                                    <constraint firstItem="Cel-DG-CuJ" firstAttribute="leading" secondItem="6a9-Hz-8yh" secondAttribute="leading" constant="12" id="wCA-K6-y1i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="6a9-Hz-8yh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Vh-wF-noA"/>
+                            <constraint firstItem="6a9-Hz-8yh" firstAttribute="top" secondItem="ngW-t9-0nj" secondAttribute="bottom" constant="1" id="9eO-EW-P4i"/>
+                            <constraint firstAttribute="trailing" secondItem="ngW-t9-0nj" secondAttribute="trailing" id="WC8-Wg-Nkk"/>
+                            <constraint firstItem="ngW-t9-0nj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="myh-Hd-2uI"/>
+                            <constraint firstItem="ngW-t9-0nj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p4j-n8-LYl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6a9-Hz-8yh" secondAttribute="trailing" id="qZD-SZ-s3R"/>
+                            <constraint firstItem="ngW-t9-0nj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="xKQ-Gp-E6m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iTranslate" id="oaa-3l-ac5"/>
+                    <connections>
+                        <outlet property="imageCountryButton" destination="Uaa-E4-rBm" id="qbh-VD-UrU"/>
+                        <outlet property="imageCountryTranslatedButton" destination="aYy-cD-kiq" id="Oma-UN-IHz"/>
+                        <outlet property="translateTextView" destination="uXj-Rr-Vo0" id="OfH-6k-hG3"/>
+                        <outlet property="translatedTextView" destination="xr7-r4-fB8" id="42V-RC-pIx"/>
+                        <segue destination="Hcg-QG-qHC" kind="show" identifier="showDetail" id="0f3-Fm-RaJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gxp-nN-6mE">
+            <objects>
+                <viewController id="Hcg-QG-qHC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tV5-ta-DYb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="r18-r1-Hcx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SvU-bB-bms"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRw-Qr-17H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Fv-cd-Q08">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ijb-x3-dLi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HJd-eG-biW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
+                        <color key="barTintColor" systemColor="systemGreenColor"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1hF-T4-gyT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GpG-KT-uJr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exchange" width="512" height="512"/>
+        <image name="mexico" width="512" height="512"/>
+        <image name="reino-unido" width="512" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
