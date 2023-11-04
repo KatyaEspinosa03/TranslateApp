@@ -33,6 +33,11 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func clearButton(_ sender: UIButton) {
+    }
+    
     @IBAction func selectCountryTranslateButton(_ sender: UIButton) {
     }
     
