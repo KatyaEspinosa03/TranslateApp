@@ -36,6 +36,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func clearButton(_ sender: UIButton) {
+        translateTextView.text = ""
+        translatedTextView.text = ""
     }
     
     @IBAction func selectCountryTranslateButton(_ sender: UIButton) {
