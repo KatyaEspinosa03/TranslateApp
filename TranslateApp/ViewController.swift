@@ -47,6 +47,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeTranslationButton(_ sender: Any) {
+        print("Estoy en la funcion changeTranslation")
+       imageCountryButton.setImage(UIImage(named: "mexico"), for: .normal)
+        imageCountryTranslatedButton.setImage(UIImage(named: "reino-unido"), for: .normal)
+        translateTextView.text = "¡Tu pasaporte al mundo!"
+        translatedTextView.text = "Your passport to the world!"
     }
     
     @IBAction func translateButton(_ sender: UIButton) {
