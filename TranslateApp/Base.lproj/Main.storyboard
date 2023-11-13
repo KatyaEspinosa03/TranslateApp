@@ -180,28 +180,108 @@
                         <outlet property="imageCountryTranslatedButton" destination="aYy-cD-kiq" id="Oma-UN-IHz"/>
                         <outlet property="translateTextView" destination="uXj-Rr-Vo0" id="OfH-6k-hG3"/>
                         <outlet property="translatedTextView" destination="xr7-r4-fB8" id="42V-RC-pIx"/>
-                        <segue destination="Hcg-QG-qHC" kind="show" identifier="showDetail" id="0f3-Fm-RaJ"/>
+                        <segue destination="9Mp-gy-5fU" kind="presentation" identifier="selectLanguage" modalPresentationStyle="fullScreen" id="ML5-nX-Gog"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="gxp-nN-6mE">
+        <!--Languages Table View Controller-->
+        <scene sceneID="jpN-TW-wtV">
             <objects>
-                <viewController id="Hcg-QG-qHC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tV5-ta-DYb">
+                <tableViewController id="9Mp-gy-5fU" customClass="LanguagesTableViewController" customModule="TranslateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="l2v-we-YOg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="r18-r1-Hcx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="SvU-bB-bms"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qRw-Qr-17H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Ahi-Qn-9VZ">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="99"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona un idioma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZM-Fr-D0r">
+                                    <rect key="frame" x="16" y="40" width="361" height="30"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ZZM-Fr-D0r" secondAttribute="trailing" constant="16" id="HH6-Ie-1zL"/>
+                                <constraint firstItem="ZZM-Fr-D0r" firstAttribute="top" secondItem="Ahi-Qn-9VZ" secondAttribute="top" constant="40" id="Ml1-dN-d32"/>
+                                <constraint firstItem="ZZM-Fr-D0r" firstAttribute="leading" secondItem="Ahi-Qn-9VZ" secondAttribute="leading" constant="16" id="p6J-fl-pL0"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="languageCellIdentifier" rowHeight="65" id="VJn-Oo-353" customClass="LanguageTableViewCell" customModule="TranslateApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="149" width="393" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJn-Oo-353" id="ck6-8x-KI8">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reino-unido" translatesAutoresizingMaskIntoConstraints="NO" id="Cpz-Wo-Wdn">
+                                            <rect key="frame" x="16" y="16.666666666666671" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="EhN-3e-jt2"/>
+                                                <constraint firstAttribute="width" constant="32" id="JdM-xy-fgB"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inglés" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKO-cB-62B">
+                                            <rect key="frame" x="64" y="17.666666666666671" width="64" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DKO-cB-62B" firstAttribute="leading" secondItem="Cpz-Wo-Wdn" secondAttribute="trailing" constant="16" id="00K-ri-GhK"/>
+                                        <constraint firstItem="Cpz-Wo-Wdn" firstAttribute="centerY" secondItem="ck6-8x-KI8" secondAttribute="centerY" id="7lK-AL-cT2"/>
+                                        <constraint firstItem="DKO-cB-62B" firstAttribute="centerY" secondItem="ck6-8x-KI8" secondAttribute="centerY" id="Rl5-aK-SyY"/>
+                                        <constraint firstItem="Cpz-Wo-Wdn" firstAttribute="leading" secondItem="ck6-8x-KI8" secondAttribute="leading" constant="16" id="aqR-pY-ZmZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="languageImageView" destination="Cpz-Wo-Wdn" id="2TC-cp-gLv"/>
+                                    <outlet property="languageLabel" destination="DKO-cB-62B" id="UXg-v8-vcG"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondLanguageCellIdentifier" id="ldD-cK-IfB" customClass="SecondTableViewCell" customModule="TranslateApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="214" width="393" height="54.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ldD-cK-IfB" id="kxm-Bm-7E5">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="54.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai9-Mi-fd9">
+                                            <rect key="frame" x="72" y="11.999999999999998" width="107.66666666666669" height="30.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ai9-Mi-fd9" secondAttribute="bottom" constant="12" id="HxV-SL-PJw"/>
+                                        <constraint firstItem="ai9-Mi-fd9" firstAttribute="leading" secondItem="kxm-Bm-7E5" secondAttribute="leading" constant="72" id="pi3-Gc-8AU"/>
+                                        <constraint firstItem="ai9-Mi-fd9" firstAttribute="top" secondItem="kxm-Bm-7E5" secondAttribute="top" constant="12" id="wo8-Vj-sFc"/>
+                                        <constraint firstItem="ai9-Mi-fd9" firstAttribute="centerY" secondItem="kxm-Bm-7E5" secondAttribute="centerY" id="zbR-k2-cji"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="secondLanguageLabel" destination="ai9-Mi-fd9" id="L9f-R0-b9D"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9Mp-gy-5fU" id="48n-7a-Lgl"/>
+                            <outlet property="delegate" destination="9Mp-gy-5fU" id="VVh-uN-gXh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDW-ox-Czi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="4"/>
+            <point key="canvasLocation" x="1881.679389312977" y="18.30985915492958"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Fv-cd-Q08">
