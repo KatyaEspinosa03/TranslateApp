@@ -7,18 +7,6 @@
 
 import UIKit
 
-struct DataContainer: Decodable{
-    let data: TranslationsData
-    
-    struct TranslationsData: Decodable {
-        let translations: [Translation]
-        
-        struct Translation: Decodable {
-            let translatedText: String
-        }
-    }
-}
-
 class ViewController: UIViewController {
     // MARK: - IBOutlets
     var translatedTexts: [DataContainer] = []
@@ -34,12 +22,15 @@ class ViewController: UIViewController {
     var translatedText = ""
     var translatedImage:UIImage?
     
-    var translateSymbol = ""
-    var translatedSymbol = "es"
+    
+    // MARK: - ViewModel
+    
+    var translateViewModel: TranslateViewModel = TranslateViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        translateViewModel.delegate = self
         setAtributes()
         
         translateImage = imageCountryButton.imageView?.image
@@ -71,10 +62,10 @@ class ViewController: UIViewController {
     @IBAction func changeTranslationButton(_ sender: Any) {
         let translateImage = imageCountryButton.imageView?.image
         let translateText = translateTextView.text
-        let translateSymbol = self.translateSymbol
+        let translateSymbol = translateViewModel.translateSymbol
         
-        self.translateSymbol = self.translatedSymbol
-        self.translatedSymbol = translateSymbol
+        translateViewModel.translateSymbol = translateViewModel.translatedSymbol
+        translateViewModel.translatedSymbol = translateSymbol
         
         imageCountryButton.setImage(imageCountryTranslatedButton.imageView?.image, for: .normal)
         translateTextView.text = translatedTextView.text
@@ -86,7 +77,7 @@ class ViewController: UIViewController {
     @IBAction func translateButton(_ sender: UIButton) {
         
         if let textToTranslate = translateTextView.text, !textToTranslate.isEmpty{
-            getTranslatation(with: textToTranslate)
+            translateViewModel.executeService(textToTranslate)
         }else {
             let alert = UIAlertController(title: "Falta información", message: "Escribe lo que deseas traducir", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default)
@@ -95,55 +86,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: - Connection with web service.
-    /// function to connect with a webservice using URLSessions
-    func getTranslatation(with text: String) {
-        let headers = [
-            "content-type": "application/x-www-form-urlencoded",
-            "Accept-Encoding": "application/gzip",
-            "X-RapidAPI-Key": "4628b3ca27msh9c7282376d9f318p1ed571jsn71c004e33816",
-            "X-RapidAPI-Host": "google-translate1.p.rapidapi.com"
-        ]
-        
-        let url = URL(string: "https://google-translate1.p.rapidapi.com/language/translate/v2")!
-        
-        let data = NSMutableData(data: "q=\(text)".data(using: .utf8)!)
-        data.append("&target=\(translatedSymbol)".data(using: .utf8)!)
-        data.append("&source=\(translateSymbol)".data(using: .utf8)!)
-        
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = headers
-        request.httpBody = data as Data
-        
-        //obtener instancia de URLSession
-        let urlSession = URLSession.shared
-        let dataTask = urlSession.dataTask(with: request) { data, response, error in
-            
-            if let error = error {
-                print(error.localizedDescription)
-            }else if let response = response as? HTTPURLResponse, let data = data {
-                do{
-                    let json = try JSONDecoder().decode(DataContainer.self, from: data)
-                    print(json)
-                    
-                    // se usa dispatchqueue para regresar al hilo principal.
-                    DispatchQueue.main.async {
-                        // usamos first! para obtener el primer elemento del arreglo
-                        self.translatedTextView.text = json.data.translations.first!.translatedText
-                    }
-                  
-                    print(json.data.translations.first!.translatedText)
-                    
-                }catch{
-                    print(error.localizedDescription)
-                    
-                }
-            }
-        }
-        dataTask.resume()
-    }
+
     
     // MARK: - Setting viewDidLoad attributes
     ///Function to set the physical properties of the elements when the app first loads.
@@ -185,12 +128,16 @@ extension ViewController: SelectLanguageDelegate {
         print(type)
         if type == "CountryTranslate" {
             imageCountryButton.setImage(UIImage(named: image), for: .normal)
-            translateSymbol = symbol
+            translateViewModel.translateSymbol = symbol
         } else {
             imageCountryTranslatedButton.setImage(UIImage(named: image), for: .normal)
-            translatedSymbol = symbol
+            translateViewModel.translatedSymbol = symbol
         }
     }
-    
-    
+}
+
+extension ViewController: TranslateDelegate {
+    func get(translation: String) {
+        translatedTextView.text = translation
+    }
 }

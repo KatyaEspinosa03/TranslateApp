@@ -6,3 +6,14 @@
 //
 
 import Foundation
+struct DataContainer: Decodable{
+    let data: TranslationsData
+    
+    struct TranslationsData: Decodable {
+        let translations: [Translation]
+        
+        struct Translation: Decodable {
+            let translatedText: String
+        }
+    }
+}

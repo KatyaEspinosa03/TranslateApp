@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7532DEF72AFEEFB6008C5168 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7532DEF62AFEEFB6008C5168 /* SecondTableViewCell.swift */; };
+		7581D5AA2B141D0F007009AA /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7581D5A92B141D0F007009AA /* DataContainer.swift */; };
+		7581D5AC2B141D27007009AA /* TranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7581D5AB2B141D27007009AA /* TranslateViewModel.swift */; };
 		75E39EAA2AED501E0051C8F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E39EA92AED501E0051C8F1 /* AppDelegate.swift */; };
 		75E39EAC2AED501E0051C8F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E39EAB2AED501E0051C8F1 /* SceneDelegate.swift */; };
 		75E39EAE2AED501E0051C8F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E39EAD2AED501E0051C8F1 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		7532DEF62AFEEFB6008C5168 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		7581D5A92B141D0F007009AA /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		7581D5AB2B141D27007009AA /* TranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewModel.swift; sourceTree = "<group>"; };
 		75E39EA62AED501E0051C8F1 /* TranslateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E39EA92AED501E0051C8F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75E39EAB2AED501E0051C8F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				75E39EB72AED501F0051C8F1 /* LaunchScreen.storyboard */,
 				75E39EBA2AED501F0051C8F1 /* Info.plist */,
 				75E39EB22AED501E0051C8F1 /* TranslateApp.xcdatamodeld */,
+				7581D5A92B141D0F007009AA /* DataContainer.swift */,
+				7581D5AB2B141D27007009AA /* TranslateViewModel.swift */,
 			);
 			path = TranslateApp;
 			sourceTree = "<group>";
@@ -153,6 +159,8 @@
 				75E39EB42AED501E0051C8F1 /* TranslateApp.xcdatamodeld in Sources */,
 				75E39EAE2AED501E0051C8F1 /* ViewController.swift in Sources */,
 				75E756AD2AF871EB00794888 /* LanguagesTableViewController.swift in Sources */,
+				7581D5AC2B141D27007009AA /* TranslateViewModel.swift in Sources */,
+				7581D5AA2B141D0F007009AA /* DataContainer.swift in Sources */,
 				75E756AF2AF8744800794888 /* LanguageTableViewCell.swift in Sources */,
 				75E39EAA2AED501E0051C8F1 /* AppDelegate.swift in Sources */,
 				7532DEF72AFEEFB6008C5168 /* SecondTableViewCell.swift in Sources */,
